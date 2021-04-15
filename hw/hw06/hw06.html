@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>home</title>
+        <style>
+                @media (max-width:600px){
+                    *{
+                        display:none;
+                    }
+            }
+            #banner{
+                display:block;
+                width:1400px;
+                height:250px;
+                margin-left:100px
+            }
+            #logo{
+                width:200px;
+                height:200px;
+                float:left;
+                margin-left:200px;
+            }
+            input{
+                display:inline;
+                width:900px;
+                margin-left:20px;
+                margin-top:75px;
+                height:50px;
+            }
+            button{
+                width:75px;
+                height:50px;
+            }
+            #hl{
+                float:left;
+                width:200px;
+                height:600px
+            }
+            #hr{
+                float:right;
+                width:200px;
+                height:600px
+            }
+            .choice{
+                margin-top:70px;
+                margin-left:750px;
+            }
+            .search{
+                position:static;
+            }
+            span{
+                position:relative;
+                left:20px;
+                top:-40px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center><img id="banner" src="./img/banner.jpg" alt="배너"></center>
+        <img id="logo" src="./img/logo.jpg" alt="로고" >
+        
+        <div class="search">  
+            <form>
+                <input type="search" placeholder="검색어를 입력하세요" name="search">
+                <button>검색</button>
+            </form>
+        </div>
+        <img id="hr" src="./img/bannerhr.jpg" alt="배너왼쪽">
+    <div class="choice">
+        <span><a href="./bestseller.html" target="if_a">베스트셀러</a>|</span>
+        <span><a href="./reference.html" target="if_a">추천상품</a>|</span>
+        <span><a href="./new.html" target="if_a">신규입고</a></span>
+    </div>
+    <center><iframe src="./bestseller.html" width="1400" 
+        height="1500" name="if_a" frameborder="0" scrolling="no"></iframe></center>
+    </body>
+</html>
