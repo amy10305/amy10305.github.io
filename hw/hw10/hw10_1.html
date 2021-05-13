@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function execute() {
+                var target=document.getElementByld("mul");
+                var result;
+                var mul1= new Array();
+                var html="";
+
+                html += "<table border='1'>";
+                for (var i=1;i<=9;i++){
+                    html += ("<th>" + i+"단"+"</th>")
+                    mul1[i] = new Array();
+                }
+                for (var j=1;j<=9;j++) {
+                    html += "<tr>";
+                    for (var k=1;k<=9;k++) {
+                        mul1[k][j] = j * k;
+                        html += "<td>" + k + '*' + j + '=' + mul1[k][j] + "</td>";
+                    }
+                    html += "</tr>"
+                }
+                html += "</table>";
+                target.innerHTML = html;
+            }
+        </script>
+    </head>
+    <body>
+        <span id="mul"></span>
+        <input id="bt" type="button" value="구구단 배열 데이터 보기" onclick="excute();" />
+    </body>
+</html>
