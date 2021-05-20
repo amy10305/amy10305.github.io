@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hw11-3</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>내가 살아온 인생 계산하기</h1>
+        <form>
+            생년월일: Year: <input id="year"></input>
+            Month: <input id="month" />
+            Day: <input id="day" /><br />
+            <button type="button" onclick="survivalCalc()">계산</button><br />
+            살아온 날 수 : <p id = "survival"></p>
+          </form>
+           
+          <script>
+            function survivalCalc(){
+              var today = new Date(); //오늘 날짜 받기
+              var both_year = parseInt(document.getElementById("year").value); //input 으로 태어난 해 받기
+              var both_month = parseInt(document.getElementById("month").value); //input 으로 태어난 월 받기
+              var both_day = parseInt(document.getElementById("day").value); //input 으로 태어난 날 받기
+              var myBoth = new Date(); //myBoth도 날짜를 저장할 변수이다.
+              myBoth.setFullYear(both_year, both_month, both_day);//myDate에 input으로 받은 생년월일 저장
+              today_Mili = Date.parse(today); //today변수를 파싱한다.
+              both_Mili = Date.parse(myBoth); //myboth 변수를 파싱한다.
+              survival_Mili = today_Mili - both_Mili; // 두 변수의 차를 구한다.
+              survival_Day = survival_Mili/1000/60/60/24;// 두 차를 다시 일수로 구하기 위해 1000/60/60/24를 나눠준다.
+              document.getElementById("survival").innerHTML = survival_Day; //위 식에 나온 날짜를 HTML 태그로 넘겨준다.
+            }
+          </script>
+    </body>
+</html>
